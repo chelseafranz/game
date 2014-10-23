@@ -48,8 +48,12 @@ var player = new Player({
   name: character_name,
   type: character_type
 });
-$('.start').fadeOut();
-$('.go').text(player.name);
+$('.start').hide("slow");
+
+var template= $('#play').html();
+var rendered=_.template(rendered);
+
+$('.play').append();
 });
 
 
@@ -65,5 +69,44 @@ var villan = new Villan({
 });
 $('.start2').hide("slow");
 $('.play').show("slow");
-$('.go2').text(villan.name);
+
+var template= $('#play').html();
+var rendered=_.template(rendered);
+
+$('.play').append();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

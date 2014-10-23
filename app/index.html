@@ -32,7 +32,7 @@
   <p>Choose Your Player</p>
 <button name="a">Player One</button>
 <button name="b">Player Two</button>
-<button name="c">Play Three</button>
+<button name="c">Player Three</button>
  </div>
 
 <div class= "start2">
@@ -45,11 +45,14 @@
 <div class= "play">
 <span class="go"> player</span>
 <span class="go2"> villan</span>
-<button name="attack" class="pow">pow</button>
-<button name="attack" class="bam">bam</button>
-<button name="attack" class="kaboom">kaboom</button>
+<button name="attack" class="attack pow">pow</button>
+<button name="attack" class="attack bam">bam</button>
+<button name="attack" class="attack kaboom">kaboom</button>
 </div>
 
+<script type="text/template" id="play">
+<span><%=name%><%=health%></span>
+</script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
