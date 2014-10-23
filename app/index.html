@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>newgame</title>
+    <title>game</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
@@ -15,6 +15,7 @@
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Squada+One' rel='stylesheet' type='text/css'>
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -22,30 +23,37 @@
     <!-- endbuild -->
   </head>
   <body>
+<div class="body">
+  <span class="head">
+    <h1>BattleBots</h1>
+  </span>
+ 
+ <div class= "start">
+  <p>Choose Your Player</p>
+<button name="a">Player One</button>
+<button name="b">Player Two</button>
+<button name="c">Play Three</button>
+ </div>
 
-    <div class="hero-unit">
-      <div class="hero-unit">
-  <div class="welcome">
-    <h3>Choose Your Character</h3>
-    <button name="1">Mario</button>
-    <button name="2">Princess Peach</button>
-    <button name="3">Toad</button>
-  </div>
-  <div class="fight">
-    <p class="ggname">Good Guy name</p>
-    <p>vs</p>
-    <p class="bgname">bad guy name</p>
-  </div>
+<div class= "start2">
+  <p>Choose Your Opponent</p>
+<button name="d">villan One</button>
+<button name="e">villan Two</button>
+<button name="f">villan Three</button>
+ </div> 
+
+<div class= "play">
+<span class="go"> player</span>
+<span class="go2"> villan</span>
+<button name="attack" class="pow">pow</button>
+<button name="attack" class="bam">bam</button>
+<button name="attack" class="kaboom">kaboom</button>
 </div>
 
-<script type = "text/template">
-  <p><%=name%></p>
-</script>
-    </div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->

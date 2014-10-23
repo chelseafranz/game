@@ -2,8 +2,8 @@
 
  // Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
-@import '../../bower_components/bitters/app/assets/stylesheets/base';
-@import '../../bower_components/neat/app/assets/stylesheets/neat';
+/*@import '../../bower_components/bitters/app/assets/stylesheets/base';
+*/@import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 $font1:'Poiret One';
 $font2:'Squada One';
@@ -12,7 +12,7 @@ body{
   font-family: $font1;
 }
 
-.body{
+/*body{
   background:
   linear-gradient(
       hsla(166, 97%, 37%, .23),
@@ -21,8 +21,34 @@ body{
 url('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/A0Z1wDL3chEqX3Q/6685133325_f538b5a5fe_b.jpg');
   width: 100%;
   height: 650px;
+}*/
+
+
+.play{
+  height: 400px;
+  width: 500px;
+  background-color: yellow;
+  display: none;
+  transition: 8s ease;
 }
-h1{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*h1{
   font-size: 12em;
   margin: 0;
   font-family: $font2;
@@ -123,7 +149,7 @@ input{
 }
 
 /* switch */////////////////////////
-.label-switch {
+/*.label-switch {
   $switch-width: 52px;
   $switch-padding: 2px;
   $switch-height: 32px;
@@ -231,8 +257,3 @@ input{
 
 .gone{
   /* display: none; */
-}
-
-.see{
-  display: inline-block;
-}
