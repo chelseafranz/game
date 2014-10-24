@@ -78,6 +78,7 @@ $('.start2 button').on('click', function(event){
 $('.start2').hide("slow");
 $('.play').show("slow");
 $('.attack').show();
+$('h1').addClass('center');
 
 $('.go').text(player.name);
 $('.go2').text(villan.name);
