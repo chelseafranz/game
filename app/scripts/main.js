@@ -3,8 +3,8 @@ var Player = function(options){
   this.health=options.health || 100;
   switch(this.type){
     case 'a':
-      attack_points= 10;
-      special_points=20;
+      attack_points= 30;
+      special_points=10;
       break;
     case 'b':
       attack_points= 20;
@@ -14,66 +14,98 @@ var Player = function(options){
       attack_points= 5;
       special_points=30;
       break;
-  }
-
-  this.health = function(opponent){
-    opponent.health = opponent.health - (_.random(0,15));
   };
-  this.bigattack = function(){
-    
+  this.pow = function(opp){
+    opp.health = opp.health - (_.random(0,5)); 
+  };
+  this.bam = function(opp){
+    opp.health = opp.health - (_.random(2,15)); 
+  };
+  this.kaboom = function(opp){
+    opp.health = opp.health - (_.random(0,5)); 
   };
 };
 
+
+var player;
+var villan;
 var Villan = function(options){
   this.name= options.name;
-  this.health= function(opponent){
-    opponent.health = opponent.health - (_.random(0,15));
-  };
-  this.bigattack = function(){
-
+  this.health= 100;
+  this.attack = function(opp){
+    opp.health = opp.health - (_.random(0,10));
   };
   this.type = options.type;
 };
+$('.play').hide();
 
+var winner= function(){
+if( player.health <=0 ){
+  alert('you lose');
+}else if (villan.health <= 0){
+  alert('you win');
+}
+};
 
 //when any button inside of '.start' is clicked..
 $('.start button').on('click', function(event){
   event.preventDefault();
 //take the 'name' of whichever button is clicked, 
 //assign that button's text value to be equal to 'new Player'
-var character_type=$(this).attr('name'),
-      character_name= $(this).text();
+    var character_type=$(this).attr('name'),
+          character_name= $(this).text();
 
-var player = new Player({
-  name: character_name,
-  type: character_type
-});
+    player = new Player({
+      name: character_name,
+      type: character_type,
+    });
+
 $('.start').hide("slow");
-
-var template= $('#play').html();
-var rendered=_.template(rendered);
-
-$('.play').append();
 });
+
 
 
 $('.start2 button').on('click', function(event){
   event.preventDefault();
 
-var character_type=$(this).attr('name'),
-      character_name= $(this).text();
+    var character_type=$(this).attr('name'),
+          character_name= $(this).text();
 
-var villan = new Villan({
-  name: character_name,
-  type: character_type
-});
+    villan = new Villan({
+      name: character_name,
+      type: character_type
+    });
 $('.start2').hide("slow");
 $('.play').show("slow");
+$('.attack').show();
 
-var template= $('#play').html();
-var rendered=_.template(rendered);
+$('.go').text(player.name);
+$('.go2').text(villan.name);
 
-$('.play').append();
+});
+
+$('.pow').on('click', function(){
+player.pow(villan);
+$('.newHealth2').text(villan.health);
+villan.attack(player);
+$('.newHealth').text(player.health);
+winner();
+});
+
+$('.bam').on('click', function(){
+player.bam(villan);
+$('.newHealth2').text(villan.health);
+villan.attack(player);
+$('.newHealth').text(player.health);
+winner();
+});
+
+$('.kaboom').on('click', function(){
+player.kaboom(villan);
+$('.newHealth2').text(villan.health);
+villan.attack(player);
+$('.newHealth').text(player.health);
+winner();
 });
 
 

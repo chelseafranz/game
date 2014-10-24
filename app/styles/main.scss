@@ -23,26 +23,52 @@ url('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/A0Z1wDL3chEqX3Q/
   height: 650px;
 }*/
 
+h1{
+
+}
 
 .play{
   height: 400px;
   width: 500px;
-  background-color: yellow;
-  display: none;
+  background: linear-gradient(
+      HSLA(0, 0%, 23%, .25),
+      HSLA(0, 0%, 23%, .88)
+    );
+  
+}
+
+.go{
+  float: left;
+  width: 50%;
+}
+.go2{
+  float:right;
+  width: 50%;
+  text-align: right;
+}
+.press{
+  margin: auto;
 }
 
 .attack{
+  display: block;
   margin: 0 auto;
+  margin-top: 10px;
+  width: 30%;
 }
 
+.newHealth{
+  float:left;
+  display: block;
+}
+.newHealth2{
+  float: right;
+  display: block;
+}
 
-
-
-
-
-
-
-
+button{
+  font-family: $font2;
+}
 
 
 
