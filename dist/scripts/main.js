@@ -128,6 +128,8 @@ $('.play').show("slow");
 $('.attack').show();
 $('.body').removeClass();
 
+
+
 $('.go').text(player.name);
 $('.go2').text(villan.name);
 

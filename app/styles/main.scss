@@ -74,10 +74,11 @@ h1{
 }
 
 .play{
-  height: 300px;
+  height: 400px;
   width: 500px;
   display: block;
   margin: 0 auto;
+  
   background: linear-gradient(
       HSLA(0, 0%, 23%, .25),
       HSLA(0, 0%, 23%, .88)
@@ -90,8 +91,9 @@ h1{
    overflow: hidden;
 
   img{
-    margin-top: -60px;
+    margin-top: 29px;
     margin-left: -27px;
+    display: block;
   }
 }
 
@@ -119,6 +121,7 @@ h1{
   margin: 0 auto;
   margin-top: 10px;
   width: 30%;
+  cursor: crosshair;
 }
 
 .newHealth{
