@@ -12,10 +12,42 @@ $font4:'Black Ops One';
 
 body{
   font-family: $font3;
+  background: url('http://www.aiiight.fr/wp-content/uploads/2011/11/6129850457_869d0c0359_b.jpg') ;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 .body{
-  padding-left: 50px;
+background-color: white;
+  height: 1000px;
+  margin-top: -200px;
 }
+.headerPic{
+  position: absolute;
+  width: 500px;
+  top: -130px;
+  left: 381px;
+  z-index: -100;
+}
+.startButtons{
+  display: block;
+  margin: 0 auto;
+}
+.rock{
+  border-radius: 5px;
+  position: relative;
+}
+.startScreen{
+width: 500px;
+display: block;
+margin: 0 auto;
+}
+#letsRock{
+position: absolute;
+width: 181px;
+top: 89px;
+right: 551px;
+}
+
 /*body{
   background:
   linear-gradient(
@@ -28,21 +60,29 @@ url('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/A0Z1wDL3chEqX3Q/
 }*/
 
 h1{
-  
-}
-
-.center{
-  text-align: center; 
+   text-align: center;
+    font-size: 100px;
+    line-height: 1;
+    letter-spacing: -1px;
+   color: white;  /* Fallback: assume this color ON TOP of image */
+  background:  url(https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/WEcKi9h3iSLcjNH/upload.png) ;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   cursor:crosshair;
+   position: relative;
+   
 }
 
 .play{
-  height: 400px;
+  height: 300px;
   width: 500px;
+  display: block;
+  margin: 0 auto;
   background: linear-gradient(
       HSLA(0, 0%, 23%, .25),
       HSLA(0, 0%, 23%, .88)
     );
-  margin: 0 auto;
+  
   border-radius: 5px;
   -moz-box-shadow:    inset 0 0 10px #000000;
    -webkit-box-shadow: inset 0 0 10px #000000;
@@ -50,9 +90,8 @@ h1{
    overflow: hidden;
 
   img{
-    margin-top: 48px;
+    margin-top: -60px;
     margin-left: -27px;
-    
   }
 }
 
@@ -60,12 +99,16 @@ h1{
   float: left;
   width: 40%;
   margin-left: 10px;
+  font-size: 2em;
+  font-family: $font4;
 }
 .go2{
   float:right;
   width: 40%;
   text-align: right;
   margin-right: 10px;
+  font-size: 2em;
+  font-family: $font4;
 }
 .press{
   margin: auto;
@@ -82,11 +125,17 @@ h1{
   float:left;
   display: block;
   margin-left: 10px;
+  font-family: $font2;
+  font-size: 1.5em;
+  color: HSLA(0, 0%, 84%, 1);
 }
 .newHealth2{
   float: right;
   display: block;
   margin-right: 10px;
+  font-family: $font2;
+  font-size: 1.5em;
+  color: HSLA(0, 0%, 84%, 1);
 }
 
 button{
@@ -99,22 +148,27 @@ button{
 .playerPic{
   float: left;
   display: inline-block;
-  background-color: blue;
   width: 200px;
   height: 200px;
+  position: relative;
+  padding-left: 50px;
+
+  img{
+    position: absolute;
+  }
 }
 .villanPic{
   float: right;
   display: inline-block;
-  background-color: red;
   width: 200px;
   height: 200px;
+  padding-right: 50px;
+  positon: relative;
+  img{
+    position: absolute;
+  }
 }
 
-#giutarA{
-  width: 150px;
-  margin: 0;
-}
 
 
 /*h1{

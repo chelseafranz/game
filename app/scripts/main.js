@@ -3,7 +3,24 @@ var villan;
 var guitarA= '<img id="guitarA" width= "200px" src="https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/El6OAAJ2LZX4rE1/pgmFM.png" />';
 var guitarB='<img id="guitarB" width= "200px" src="https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/6UMkgCV4REeDKbY/r340.png" />';
 var guitarC='<img id="guitarC" width= "200px" src="https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/GfrOpc1bblZ91sh/r4000B.png" />';
-var guitarD='<img id="guitarC" width= "200px" src="https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/zShfuykziHO2ZjP/6199.png" />';
+var guitarD='<img id="guitarD" width= "200px" src="https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/zShfuykziHO2ZjP/6199.png" />';
+var fire = '<img id="fire" width= "200px" src="https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/m2izq2Lt4fkPEXt/fire.png" />';
+var winFlames= function(){
+$('.playerPic').append(fire);
+};
+
+var loseFlames= function(){
+$('.villanPic').append(fire);
+};
+
+var winner= function(){
+if( player.health <=0 ){
+  loseFlames();
+}else if (villan.health <= 0){
+  winFlames();
+}
+};
+
 var Player = function(options){
   this.name=options.name;
   this.health=options.health || 100;
@@ -33,8 +50,6 @@ var Player = function(options){
 };
 
 
-
-
 var Villan = function(options){
   this.name= options.name;
   this.health= 100;
@@ -44,14 +59,16 @@ var Villan = function(options){
   this.type = options.type;
 };
 $('.play').hide();
+ $('.startButtons').hide();
 
-var winner= function(){
-if( player.health <=0 ){
-  alert('you lose');
-}else if (villan.health <= 0){
-  alert('you win');
-}
-};
+$('#letsRock').on('click', function(){
+
+$('.startButtons').show();
+$('#letsRock').removeClass('.body');
+$('.rock').fadeToggle();
+$('#letsRock').fadeToggle();
+})
+
 
 //when any button inside of '.start' is clicked..
 $('.start button').on('click', function(event){
@@ -109,7 +126,9 @@ $('.start2 button').on('click', function(event){
 $('.start2').hide("slow");
 $('.play').show("slow");
 $('.attack').show();
-$('h1').addClass('center');
+$('.body').removeClass();
+
+
 
 $('.go').text(player.name);
 $('.go2').text(villan.name);
