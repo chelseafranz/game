@@ -13,7 +13,9 @@ $font4:'Black Ops One';
 body{
   font-family: $font3;
 }
-
+.body{
+  padding-left: 50px;
+}
 /*body{
   background:
   linear-gradient(
@@ -28,9 +30,14 @@ url('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/A0Z1wDL3chEqX3Q/
 h1{
   
 }
+h1:hover{
+  -webkit-transform: scale(1.8);
+  transition:  2s 0 ease;
+
+}
 .center{
   text-align: center;
-  transition: 2s;
+  
 }
 
 .play{
