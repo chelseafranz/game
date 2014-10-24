@@ -1,3 +1,9 @@
+var player;
+var villan;
+var guitarA= '<img id="guitarA" width= "200px" src="https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/El6OAAJ2LZX4rE1/pgmFM.png" />';
+var guitarB='<img id="guitarB" width= "200px" src="https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/6UMkgCV4REeDKbY/r340.png" />';
+var guitarC='<img id="guitarC" width= "200px" src="https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/GfrOpc1bblZ91sh/r4000B.png" />';
+var guitarD='<img id="guitarC" width= "200px" src="https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/zShfuykziHO2ZjP/6199.png" />';
 var Player = function(options){
   this.name=options.name;
   this.health=options.health || 100;
@@ -27,8 +33,8 @@ var Player = function(options){
 };
 
 
-var player;
-var villan;
+
+
 var Villan = function(options){
   this.name= options.name;
   this.health= 100;
@@ -54,11 +60,23 @@ $('.start button').on('click', function(event){
 //assign that button's text value to be equal to 'new Player'
     var character_type=$(this).attr('name'),
           character_name= $(this).text();
-
+    
     player = new Player({
       name: character_name,
       type: character_type,
     });
+
+  switch (player.name){
+      case "Slash":
+      $('.playerPic').html(guitarA);
+        break;
+            case "Freddie":
+      $('.playerPic').append(guitarB);
+          break;
+      case "Ozzy":
+      $('.playerPic').append(guitarC);
+        break;
+    };
 
 $('.start').hide("slow");
 });
@@ -75,6 +93,19 @@ $('.start2 button').on('click', function(event){
       name: character_name,
       type: character_type
     });
+
+    switch (villan.name){
+      case "Axl":
+        $('.villanPic').append(guitarD);
+        break;
+      case "Dave":
+        $('.villanPic').append(guitarD);
+          break;
+      case "Kurt":
+        $('.villanPic').append(guitarD);
+        break;
+    };
+
 $('.start2').hide("slow");
 $('.play').show("slow");
 $('.attack').show();

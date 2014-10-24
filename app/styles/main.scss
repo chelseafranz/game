@@ -30,14 +30,9 @@ url('https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/A0Z1wDL3chEqX3Q/
 h1{
   
 }
-h1:hover{
-  -webkit-transform: scale(1.8);
-  transition:  2s 0 ease;
 
-}
 .center{
-  text-align: center;
-  
+  text-align: center; 
 }
 
 .play{
@@ -101,9 +96,25 @@ button{
   background-color: HSLA(0, 0%, 23%, 1);
 }
 
+.playerPic{
+  float: left;
+  display: inline-block;
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+}
+.villanPic{
+  float: right;
+  display: inline-block;
+  background-color: red;
+  width: 200px;
+  height: 200px;
+}
 
-
-
+#giutarA{
+  width: 150px;
+  margin: 0;
+}
 
 
 /*h1{
