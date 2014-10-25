@@ -61,12 +61,11 @@ var Villan = function(options){
 $('.play').hide();
  $('.startButtons').hide();
 
-$('#letsRock').on('click', function(){
+$('.rock').on('click', function(){
 
 $('.startButtons').show();
 $('#letsRock').removeClass('.body');
-$('.rock').fadeToggle();
-$('#letsRock').fadeToggle();
+
 });
 
 
@@ -128,41 +127,42 @@ $('.play').show("slow");
 $('.attack').show();
 $('.body').removeClass();
 
-
-
 $('.go').text(player.name);
 $('.go2').text(villan.name);
 
 });
 
 $('.pow').on('click', function(){
-player.pow(villan);
+  player.pow(villan);
 $('.newHealth2').text(villan.health);
-villan.attack(player);
+  villan.attack(player);
 $('.newHealth').text(player.health);
-winner();
+  winner();
 });
 
 $('.bam').on('click', function(){
-player.bam(villan);
+  player.bam(villan);
 $('.newHealth2').text(villan.health);
-villan.attack(player);
+  villan.attack(player);
 $('.newHealth').text(player.health);
-winner();
+  winner();
 });
 
 $('.kaboom').on('click', function(){
-player.kaboom(villan);
+  player.kaboom(villan);
 $('.newHealth2').text(villan.health);
-villan.attack(player);
+  villan.attack(player);
 $('.newHealth').text(player.health);
-winner();
+  winner();
 });
 
 
 
-
-
+$(".rock").on('click', function(){
+    $(".rock").animate({height:"600px", width: "600px"});
+    $('#letsRock').animate({width: "300px"});
+  });
+  
 
 
 
