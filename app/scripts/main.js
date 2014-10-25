@@ -45,7 +45,7 @@ var Player = function(options){
     opp.health = opp.health - (_.random(2,15)); 
   };
   this.kaboom = function(opp){
-    opp.health = opp.health - (_.random(0,5)); 
+    opp.health = opp.health - (_.random(5,20)); 
   };
 };
 
@@ -66,8 +66,9 @@ var Villan = function(options){
 
 
   $('h2').on('click', function(){
-  $('h2').fadeOut(2000, 'linear');
+  
   $('h2').addClass('flip', 1500, 'linear'); 
+  $('h2').fadeOut(2000);
   $('.startButtons').fadeIn(3000, 'linear');
   $('.playerPic').show(3000);
   $('.villanPic').show(3000);
@@ -147,6 +148,7 @@ $('.go2').text(villan.name);
 
 $('.pow').on('click', function(){
   player.pow(villan);
+  console.log(player.pow);
 $('.newHealth2').text(villan.health);
   villan.attack(player);
 $('.newHealth').text(player.health);
