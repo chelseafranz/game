@@ -18,7 +18,7 @@ if( player.health <=0 ){
   loseFlames();
 }else if (villan.health <= 0){
   winFlames();
-}
+};
 };
 
 var Player = function(options){
@@ -58,16 +58,23 @@ var Villan = function(options){
   };
   this.type = options.type;
 };
+
+
+
 $('.play').hide();
  $('.startButtons').hide();
+ $('.playerPic').hide();
+ $('.villanPic').hide();
 
-$('#letsRock').on('click', function(){
-
+$('h2').on('click', function(){
+$('h2').addClass('flip', 2000, 'linear'); 
+$('h2').hide(2000);
 $('.startButtons').show();
-$('#letsRock').removeClass('.body');
-$('.rock').fadeToggle();
-$('#letsRock').fadeToggle();
+$('.playerPic').show(3000);
+ $('.villanPic').show(3000);
 });
+
+
 
 
 //when any button inside of '.start' is clicked..
@@ -125,7 +132,8 @@ $('.start2 button').on('click', function(event){
 
 $('.start2').hide("slow");
 $('.play').show("slow");
-$('.attack').show();
+$('.attack').show(800);
+$('.rock').hide(800)
 $('.body').removeClass();
 
 $('.go').text(player.name);
@@ -134,29 +142,28 @@ $('.go2').text(villan.name);
 });
 
 $('.pow').on('click', function(){
-player.pow(villan);
+  player.pow(villan);
 $('.newHealth2').text(villan.health);
-villan.attack(player);
+  villan.attack(player);
 $('.newHealth').text(player.health);
-winner();
+  winner();
 });
 
 $('.bam').on('click', function(){
-player.bam(villan);
+  player.bam(villan);
 $('.newHealth2').text(villan.health);
-villan.attack(player);
+  villan.attack(player);
 $('.newHealth').text(player.health);
-winner();
+  winner();
 });
 
 $('.kaboom').on('click', function(){
-player.kaboom(villan);
+  player.kaboom(villan);
 $('.newHealth2').text(villan.health);
-villan.attack(player);
+  villan.attack(player);
 $('.newHealth').text(player.health);
-winner();
+  winner();
 });
-
 
 
 
