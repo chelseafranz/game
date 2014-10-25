@@ -18,7 +18,7 @@ if( player.health <=0 ){
   loseFlames();
 }else if (villan.health <= 0){
   winFlames();
-}
+};
 };
 
 var Player = function(options){
@@ -58,15 +58,23 @@ var Villan = function(options){
   };
   this.type = options.type;
 };
+
+
+
 $('.play').hide();
  $('.startButtons').hide();
+ $('.playerPic').hide();
+ $('.villanPic').hide();
 
-$('.rock').on('click', function(){
-
+$('h2').on('click', function(){
+$('h2').addClass('flip', 2000, 'linear'); 
+$('h2').hide(2000);
 $('.startButtons').show();
-$('#letsRock').removeClass('.body');
-
+$('.playerPic').show(3000);
+ $('.villanPic').show(3000);
 });
+
+
 
 
 //when any button inside of '.start' is clicked..
@@ -124,7 +132,8 @@ $('.start2 button').on('click', function(event){
 
 $('.start2').hide("slow");
 $('.play').show("slow");
-$('.attack').show();
+$('.attack').show(800);
+$('.rock').hide(800)
 $('.body').removeClass();
 
 $('.go').text(player.name);
@@ -158,11 +167,7 @@ $('.newHealth').text(player.health);
 
 
 
-$(".rock").on('click', function(){
-    $(".rock").animate({height:"600px", width: "600px"});
-    $('#letsRock').animate({width: "300px"});
-  });
-  
+
 
 
 
