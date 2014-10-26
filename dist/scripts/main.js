@@ -60,18 +60,16 @@ var Villan = function(options){
 };
 
   $('.play').hide();
+  $('.getReady').hide();
   $('.startButtons').hide();
   $('.playerPic').hide();
   $('.villanPic').hide();
 
 
   $('h2').on('click', function(){
-  
-  $('h2').addClass('flip', 1500, 'linear'); 
-  $('h2').fadeOut(2000);
-  $('.startButtons').fadeIn(3000, 'linear');
-  $('.playerPic').show(3000);
-  $('.villanPic').show(3000);
+  $('h2').addClass('animated hinge');
+  $('.startButtons').show(800);
+   
   });
 
 
@@ -103,6 +101,8 @@ $('.start button').on('click', function(event){
     };
 
 $('.start').hide("slow");
+$('.playerPic').show(1000);
+ 
 });
 
 
@@ -129,22 +129,41 @@ $('.start2 button').on('click', function(event){
         $('.villanPic').append(guitarD);
         break;
     };
+$('.start2').hide(200, function(){
 
-$('.start2').fadeOut(200, function(){
-  $('.play').show("slow");
-  $('.attack').show(400);
-  $('.rock').hide(300);
+  $('.villanPic').show(1000);
+  $('.getReady').show(800);
+
+});
+
+
+  $('.getReady').on('click', function(){
+    $('.attack').show(400);
+    // $('.body').hide(800);
+    $('.rock').hide(800);
+    $('.play').show(800);
+  $('.rock').addClass('animated flipOutX');
   $('.body').removeClass();
-});
-// $('.play').show("slow");
-// $('.attack').show(800);
-// $('.rock').hide(800);
-// $('.body').removeClass();
+  $('.getReady').hide(800);
+    $('.go').text(player.name);
+    $('.go2').text(villan.name);
+    
+    $('.attack').show(800);
+  });
+  });
 
-$('.go').text(player.name);
-$('.go2').text(villan.name);
+ //
 
-});
+ // 
+//  
+// 
+
+
+  
+
+
+
+
 
 $('.pow').on('click', function(){
   player.pow(villan);
