@@ -39,13 +39,13 @@ var Player = function(options){
       break;
   };
   this.pow = function(opp){
-    opp.health = opp.health - (_.random(0,5)); 
+    opp.health = opp.health - (_.random(0,5));
   };
   this.bam = function(opp){
-    opp.health = opp.health - (_.random(2,15)); 
+    opp.health = opp.health - (_.random(2,15));
   };
   this.kaboom = function(opp){
-    opp.health = opp.health - (_.random(5,20)); 
+    opp.health = opp.health - (_.random(5,20));
   };
 };
 
@@ -69,7 +69,7 @@ var Villan = function(options){
   $('h2').on('click', function(){
   $('h2').addClass('animated hinge');
   $('.startButtons').show(800);
-   
+
   });
 
 
@@ -78,11 +78,11 @@ var Villan = function(options){
 //when any button inside of '.start' is clicked..
 $('.start button').on('click', function(event){
   event.preventDefault();
-//take the 'name' of whichever button is clicked, 
+//take the 'name' of whichever button is clicked,
 //assign that button's text value to be equal to 'new Player'
     var character_type=$(this).attr('name'),
           character_name= $(this).text();
-    
+
     player = new Player({
       name: character_name,
       type: character_type,
@@ -90,7 +90,7 @@ $('.start button').on('click', function(event){
 
   switch (player.name){
       case "Slash":
-      $('.playerPic').html(guitarA);
+      $('.playerPic').append(guitarA);
         break;
             case "Freddie":
       $('.playerPic').append(guitarB);
@@ -102,7 +102,7 @@ $('.start button').on('click', function(event){
 
 $('.start').hide("slow");
 $('.playerPic').show(1000);
- 
+
 });
 
 
@@ -147,19 +147,19 @@ $('.start2').hide(200, function(){
   $('.getReady').hide(800);
     $('.go').text(player.name);
     $('.go2').text(villan.name);
-    
+
     $('.attack').show(800);
   });
   });
 
  //
 
- // 
-//  
-// 
+ //
+//
+//
 
 
-  
+
 
 
 
@@ -189,37 +189,3 @@ $('.newHealth2').text(villan.health);
 $('.newHealth').text(player.health);
   winner();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
