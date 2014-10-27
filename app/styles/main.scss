@@ -1,5 +1,3 @@
-
-
  // Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
@@ -19,7 +17,7 @@ body{
   cursor: crosshair;
 }
 .body{
-  background: 
+  background:
   linear-gradient(
       HSLA(0, 0%, 23%, 1),
       HSLA(0, 0%, 23%, .98)
@@ -85,7 +83,7 @@ h1{
    -webkit-text-fill-color: transparent;
    cursor:crosshair;
    position: relative;
-   
+
 }
 
 .play{
@@ -97,7 +95,7 @@ h1{
       HSLA(0, 0%, 23%, .25),
       HSLA(0, 0%, 23%, .88)
     );
-  
+
   border-radius: 5px;
   -moz-box-shadow:    inset 0 0 10px #000000;
    -webkit-box-shadow: inset 0 0 10px #000000;
@@ -166,7 +164,7 @@ button{
   background:linear-gradient(
       HSLA(0, 0%, 84%, .4),
       HSLA(0, 0%, 84%, .4)
-    ); 
+    );
   width: 150px;
   height: 150px;
   float: left;
@@ -188,7 +186,7 @@ right: -27px;
   background:linear-gradient(
       HSLA(0, 0%, 84%, .4),
       HSLA(0, 0%, 84%, .4)
-    ); 
+    );
   width: 150px;
   height: 150px;
   border-radius: 100%;
@@ -196,7 +194,7 @@ right: -27px;
   display: inline-block;
       top: 269px;
     right: 155px;
-  
+
   positon: relative;
   margin-top: -357px;
   margin-right: 188px;
